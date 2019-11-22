@@ -8,10 +8,20 @@ source "$CURRENT_DIR/scripts/helpers.sh"
 
 info_interpolation=(
   "\#{public_ip}"
+  "\#{public_ip_country}"
+  "\#{public_ip_country_iso}"
+  "\#{public_ip_city}"
+  "\#{public_ip_asn}"
+  "\#{public_ip_asn_org}"
 )
 
 info_commands=(
-  "#($CURRENT_DIR/scripts/public_ip.sh)"
+  "#($CURRENT_DIR/scripts/public_ip.sh IP)"
+  "#($CURRENT_DIR/scripts/public_ip.sh COUNTRY)"
+  "#($CURRENT_DIR/scripts/public_ip.sh COUNTRY_ISO)"
+  "#($CURRENT_DIR/scripts/public_ip.sh CITY)"
+  "#($CURRENT_DIR/scripts/public_ip.sh ASN)"
+  "#($CURRENT_DIR/scripts/public_ip.sh ASN_ORG)"
 )
 
 set_tmux_option() {
